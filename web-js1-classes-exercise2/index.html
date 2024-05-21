@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Slider</title>
+    <title>Responsive Image Slider</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex items-center justify-center h-screen bg-gray-200">
-    <div id="slider" class="flex items-center">
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div id="slider" class="relative flex items-center w-full max-w-4xl mx-auto">
       <button
         id="previousButton"
-        class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded"
+        class="absolute left-0 z-10 px-4 py-2 bg-white border border-gray-300 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
       >
-        Previous
+        &#10094;
       </button>
-      <div id="imageContainer" class="w-96 h-64 overflow-hidden mx-4">
+      <div id="imageContainer" class="w-full h-full overflow-hidden rounded-lg shadow-lg">
         <img
           id="sliderImage"
           class="w-full h-full object-cover"
@@ -24,9 +24,9 @@
       </div>
       <button
         id="nextButton"
-        class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded"
+        class="absolute right-0 z-10 px-4 py-2 bg-white border border-gray-300 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none"
       >
-        Next
+        &#10095;
       </button>
     </div>
     <script type="module" src="main.js"></script>
